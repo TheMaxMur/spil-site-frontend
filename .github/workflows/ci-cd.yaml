@@ -15,5 +15,5 @@ jobs:
       - name: Download flutter
         run: |
                 wget https://storage.googleapis.com/flutter_infra_release/releases/stable/linux/flutter_linux_2.10.4-stable.tar.xz
-                tar xf ~/Downloads/flutter_linux_2.10.4-stable.tar.xz
+                tar xf ./flutter_linux_2.10.4-stable.tar.xz
                 ls -laR
