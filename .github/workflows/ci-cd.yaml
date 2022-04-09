@@ -2,7 +2,7 @@ name: ci-cd-front-spil
 
 on:
   push:
-    branches: [ master ]
+    branches: [ main ]
 
 jobs:
   CI:
