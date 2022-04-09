@@ -1,0 +1,17 @@
+name: ci-cd-front-spil
+
+on:
+  push:
+    branches: [ master ]
+
+jobs:
+  CI:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Git clone repo
+        uses: actions/checkout@v2
+
+      - name: Download flutter
+        run: |
+                ls -la
