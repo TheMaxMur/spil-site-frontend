@@ -691,25 +691,22 @@ class _ProjectDetailsWidgetState extends State<ProjectDetailsWidget> {
       );
 
   Widget buildImageMobile(String projectImage, int index) => Container(
-      height: 600,
-      width: 600,
-      margin: EdgeInsets.symmetric(horizontal: 1),
-      color: Colors.white,
-      // child: GestureDetector(
-      //   child: Hero(
-      //     tag: 'imageHero',
-      //     child: Image.network(
-      //       projectImage,
-      //     ),
-      //   ),
-      //   onTap: () {
-      //     Navigator.push(context, MaterialPageRoute(builder: (_) {
-      //       return DetailScreenMobile(
-      //         projectImage: projectImage,
-      //       );
-      //     }));
-      //   },
-      // )
+        height: 600,
+        width: 600,
+        margin: EdgeInsets.symmetric(horizontal: 1),
+        color: Colors.white,
+        child: GestureDetector(
+          child: Image.network(
+            projectImage,
+          ),
+          onTap: () {
+            Navigator.push(context, MaterialPageRoute(builder: (_) {
+              return DetailScreenMobile(
+                projectImage: projectImage,
+              );
+            }));
+          },
+          // )
 //         child: PinchZoom(
 //     child: Image.network(projectImage),
 //     resetDuration: const Duration(milliseconds: 0),
@@ -717,10 +714,11 @@ class _ProjectDetailsWidgetState extends State<ProjectDetailsWidget> {
 //     onZoomStart: (){Navigator.push(context, MaterialPageRoute(builder: (_) {return DetailScreen(projectImage: projectImage,);}));},
 //     onZoomEnd: (){print('Stop zooming');},
 // ),
-      // child: Image.network(
-      //   projectImage,
-      //   fit: BoxFit.fitHeight,
-      // ),
+          // child: Image.network(
+          //   projectImage,
+          //   fit: BoxFit.fitHeight,
+          // ),
+        ),
       );
 
   Widget buildIndicator() => AnimatedSmoothIndicator(
