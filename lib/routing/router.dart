@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:web_app/routing/route_names.dart';
 import 'package:web_app/views/projects/project_details_view.dart';
 import 'package:web_app/widgets/news_view/news_list_view.dart';
+import 'package:web_app/widgets/projects_details/project_details_widget.dart';
 // import 'package:web_app/widgets/news_view/news_details_widget.dart';
 
 import '../views/contact_view/contact_view.dart';
