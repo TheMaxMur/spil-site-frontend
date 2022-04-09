@@ -1,0 +1,25 @@
+---
+- name: Deploy
+  hosts: spil-site
+  vars:  
+    ansible_sudo_pass: !vault |
+          $ANSIBLE_VAULT;1.1;AES256
+          64396264663964373862626361323266626136376261383135643461373232353565323437333562
+          3937373761633635663134356162623138666631333862350a666334316532336134313637336233
+          38353035333837353033383661626265303834303433666563653238663165313561626364663732
+          6537336562373632390a666664323236663831303763393234363864376239613232613334373131
+          6632
+  tasks:
+    - name: Git pull repository
+      shell: |
+        cd /home/maxmur/spil-site-frontend
+        git pull origin main
+      become: true             
+      no_log: true 
+    
+    - name: Build Flutter web project
+      shell: |
+        cd /home/maxmur/spil-site-frontend
+        flutter build web
+      become: true            
+      no_log: true 

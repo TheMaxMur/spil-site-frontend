@@ -17,3 +17,21 @@ jobs:
                 wget https://storage.googleapis.com/flutter_infra_release/releases/stable/linux/flutter_linux_2.10.4-stable.tar.xz > /dev/null 2>&1
                 tar xf ./flutter_linux_2.10.4-stable.tar.xz
                 ./flutter/bin/flutter build web
+
+  CD:
+    runs-on: ubuntu-latest
+
+    needs: [CI]
+    
+    steps:
+      - name: Download repo
+        uses: actions/checkout@v2
+      - name: Run playbook
+        uses: dawidd6/action-ansible-playbook@v2
+        with:
+          playbook: ./ansible/rebuild_project.yml
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          vault_password: ${{ secrets.VAULT_PASSWORD }}
+          inventory: |
+            [spil-site]
+            188.225.42.195 ansible_user=maxmur ansible_port=40444
