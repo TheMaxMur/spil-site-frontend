@@ -3,6 +3,9 @@ import 'package:carousel_slider/carousel_slider.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 import 'package:web_app/widgets/centered_view/centered_view.dart';
 import 'package:web_app/widgets/projects_details/projects.dart';
+
+import 'package:pinch_zoom/pinch_zoom.dart';
+import 'package:extended_image/extended_image.dart';
 // import 'package:photo_view/photo_view.dart';
 // import 'package:photo_view/photo_view_gallery.dart';
 
@@ -118,7 +121,7 @@ class _ProjectDetailsWidgetState extends State<ProjectDetailsWidget> {
                       SizedBox(
                         height: 20,
                       ),
-                      Row(
+                      Column(
                         children: [
                           Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
@@ -197,7 +200,7 @@ class _ProjectDetailsWidgetState extends State<ProjectDetailsWidget> {
                             itemBuilder: (context, index2, realIndex) {
                               final projectImage = Projects
                                   .projects[index].projectImages[index2];
-                              return buildImage(projectImage, index2);
+                              return buildImageMobile(projectImage, index2);
                             },
                           ),
                         ),
@@ -292,7 +295,7 @@ class _ProjectDetailsWidgetState extends State<ProjectDetailsWidget> {
                     SizedBox(
                       height: 20,
                     ),
-                    Row(
+                    Column(
                       children: [
                         Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
@@ -440,16 +443,17 @@ class _ProjectDetailsWidgetState extends State<ProjectDetailsWidget> {
                     Column(
                       children: [
                         Column(
-                          
-                          crossAxisAlignment: CrossAxisAlignment.start ,
+                          crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Text('Project creators',
                                 style: TextStyle(
                                     fontSize: 21,
                                     height: 1.2,
                                     fontWeight: FontWeight.w800)),
-                            Text(Projects.projects[index].projectCreators,
-                                style: TextStyle(fontSize: 21, height: 1.2),)
+                            Text(
+                              Projects.projects[index].projectCreators,
+                              style: TextStyle(fontSize: 21, height: 1.2),
+                            )
                           ],
                         ),
                       ],
@@ -525,7 +529,7 @@ class _ProjectDetailsWidgetState extends State<ProjectDetailsWidget> {
                           itemBuilder: (context, index2, realIndex) {
                             final projectImage =
                                 Projects.projects[index].projectImages[index2];
-                            return buildImage(projectImage, index2);
+                            return buildImageDesktop(projectImage, index2);
                           },
                         ),
                       ),
@@ -617,25 +621,24 @@ class _ProjectDetailsWidgetState extends State<ProjectDetailsWidget> {
                   SizedBox(
                     height: 20,
                   ),
-                  Row(
-                      children: [
-                        Column(
-                          
-                          crossAxisAlignment: CrossAxisAlignment.start ,
-                          children: [
-                            Text('Project creators',
-                                style: TextStyle(
-                                    fontSize: 21,
-                                    height: 1.2,
-                                    fontWeight: FontWeight.w800)),
-                            Text(Projects.projects[index].projectCreators,
-                                style: TextStyle(fontSize: 21, height: 1.2),)
-                          ],
-                        ),
-                      ],
-                    ),
-                  
-                  
+                  Column(
+                    children: [
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text('Project creators',
+                              style: TextStyle(
+                                  fontSize: 21,
+                                  height: 1.2,
+                                  fontWeight: FontWeight.w800)),
+                          Text(
+                            Projects.projects[index].projectCreators,
+                            style: TextStyle(fontSize: 21, height: 1.2),
+                          )
+                        ],
+                      ),
+                    ],
+                  ),
                   SizedBox(
                     height: 20,
                   ),
@@ -657,15 +660,67 @@ class _ProjectDetailsWidgetState extends State<ProjectDetailsWidget> {
     );
   }
 
-  Widget buildImage(String projectImage, int index) => Container(
-        height: 600,
-        width: 600,
-        margin: EdgeInsets.symmetric(horizontal: 1),
-        color: Colors.white,
+  Widget buildImageDesktop(String projectImage, int index) => Container(
+      height: 600,
+      width: 600,
+      margin: EdgeInsets.symmetric(horizontal: 1),
+      color: Colors.white,
+      child: GestureDetector(
         child: Image.network(
           projectImage,
-          fit: BoxFit.fitHeight,
         ),
+        onTap: () {
+          Navigator.push(context, MaterialPageRoute(builder: (_) {
+            return DetailScreenDesktop(
+              projectImage: projectImage,
+            );
+          }));
+        },
+      )
+//         child: PinchZoom(
+//     child: Image.network(projectImage),
+//     resetDuration: const Duration(milliseconds: 0),
+//     maxScale: 2.5,
+//     onZoomStart: (){Navigator.push(context, MaterialPageRoute(builder: (_) {return DetailScreen(projectImage: projectImage,);}));},
+//     onZoomEnd: (){print('Stop zooming');},
+// ),
+      // child: Image.network(
+      //   projectImage,
+      //   fit: BoxFit.fitHeight,
+      // ),
+      );
+
+  Widget buildImageMobile(String projectImage, int index) => Container(
+      height: 600,
+      width: 600,
+      margin: EdgeInsets.symmetric(horizontal: 1),
+      color: Colors.white,
+      // child: GestureDetector(
+      //   child: Hero(
+      //     tag: 'imageHero',
+      //     child: Image.network(
+      //       projectImage,
+      //     ),
+      //   ),
+      //   onTap: () {
+      //     Navigator.push(context, MaterialPageRoute(builder: (_) {
+      //       return DetailScreenMobile(
+      //         projectImage: projectImage,
+      //       );
+      //     }));
+      //   },
+      // )
+//         child: PinchZoom(
+//     child: Image.network(projectImage),
+//     resetDuration: const Duration(milliseconds: 0),
+//     maxScale: 2.5,
+//     onZoomStart: (){Navigator.push(context, MaterialPageRoute(builder: (_) {return DetailScreen(projectImage: projectImage,);}));},
+//     onZoomEnd: (){print('Stop zooming');},
+// ),
+      // child: Image.network(
+      //   projectImage,
+      //   fit: BoxFit.fitHeight,
+      // ),
       );
 
   Widget buildIndicator() => AnimatedSmoothIndicator(
@@ -708,4 +763,108 @@ class _ProjectDetailsWidgetState extends State<ProjectDetailsWidget> {
       );
   void next() => controller.nextPage();
   void previous() => controller.previousPage();
+}
+
+class DetailScreenDesktop extends StatefulWidget {
+  final String projectImage;
+
+  DetailScreenDesktop({Key? key, required this.projectImage}) : super(key: key);
+
+  @override
+  State<DetailScreenDesktop> createState() =>
+      _DetailScreenDesktopState(projectImage);
+}
+
+class _DetailScreenDesktopState extends State<DetailScreenDesktop> {
+  _DetailScreenDesktopState(String projectImage);
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+        backgroundColor: Colors.white,
+        appBar: AppBar(
+          backgroundColor: Colors.transparent,
+          bottomOpacity: 0.0,
+          elevation: 0.0,
+          leading: IconButton(
+            icon: Icon(Icons.close, color: Colors.black),
+            onPressed: () => Navigator.of(context).pop(),
+          ),
+        ),
+        body: Center(
+          child: Container(
+            child: Image.network(
+              widget.projectImage,
+            ),
+          ),
+        )
+        // body: GestureDetector(
+        //   child: Center(
+        //     child: Hero(
+        //       tag: 'imageHero',
+        //       child: Image.network(
+        //         widget.projectImage,
+        //       ),
+        //     ),
+        //   ),
+        //   onTap: () {
+        //     Navigator.pop(context);
+        //   },
+        // ),
+        );
+  }
+}
+
+class DetailScreenMobile extends StatefulWidget {
+  final String projectImage;
+
+  DetailScreenMobile({Key? key, required this.projectImage}) : super(key: key);
+
+  @override
+  State<DetailScreenMobile> createState() =>
+      _DetailScreenMobileState(projectImage);
+}
+
+class _DetailScreenMobileState extends State<DetailScreenMobile> {
+  _DetailScreenMobileState(String projectImage);
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+        backgroundColor: Colors.white,
+        appBar: AppBar(
+          backgroundColor: Colors.transparent,
+          bottomOpacity: 0.0,
+          elevation: 0.0,
+          leading: IconButton(
+            icon: Icon(Icons.close, color: Colors.black),
+            onPressed: () => Navigator.of(context).pop(),
+          ),
+        ),
+        body: Center(
+          child: Container(
+            child: PinchZoom(
+              child: Image.network(widget.projectImage),
+              resetDuration: const Duration(milliseconds: 0),
+              maxScale: 2.5,
+              onZoomStart: () {},
+              onZoomEnd: () {},
+            ),
+          ),
+        )
+        // body: GestureDetector(
+        //   child: Center(
+        //     child: Hero(
+        //       tag: 'imageHero',
+        //       child: Image.network(
+        //         widget.projectImage,
+        //       ),
+        //     ),
+        //   ),
+        //   onTap: () {
+        //     Navigator.pop(context);
+        //   },
+        // ),
+        );
+  }
 }
