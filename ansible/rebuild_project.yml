@@ -21,5 +21,6 @@
       shell: |
         cd /home/maxmur/spil-site-frontend
         flutter build web
+        cp -r ./build/web/ /home/maxmur/spil-site-backend/docker/dev/data/
       become: true            
       #no_log: true 
