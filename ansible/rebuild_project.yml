@@ -15,11 +15,11 @@
         cd /home/maxmur/spil-site-frontend
         git pull origin main
       become: true             
-      no_log: true 
+      #no_log: true 
     
     - name: Build Flutter web project
       shell: |
         cd /home/maxmur/spil-site-frontend
         flutter build web
       become: true            
-      no_log: true 
+      #no_log: true 
