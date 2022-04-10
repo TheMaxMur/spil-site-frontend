@@ -11,6 +11,7 @@ class MainNavigationBar extends StatefulWidget {
   const MainNavigationBar({Key? key}) : super(key: key);
 
   @override
+  // ignore: no_logic_in_create_state
   State<MainNavigationBar> createState() => _MainNavigationBarState();
 }
 

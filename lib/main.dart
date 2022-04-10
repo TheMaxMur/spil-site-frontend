@@ -44,7 +44,7 @@ class MyApp extends StatelessWidget {
       //   },
       // },
       // initialRoute: '/home',
-      builder: (context, child) => LayoutTemplate(child: child!,),
+      builder: (context, child) => LayoutTemplate(child: child!, contextMain: context,),
 
       navigatorKey: locator<NavigationService>().navigatorKey,
       onGenerateRoute: generateRoute,
