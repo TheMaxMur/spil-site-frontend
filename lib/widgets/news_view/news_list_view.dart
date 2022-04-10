@@ -34,7 +34,7 @@ class _NewsListViewState extends State<NewsListView> {
   @override
   Widget build(BuildContext context) {
     final currentWidth = MediaQuery.of(context).size.width;
-    if (currentWidth > 900) {
+    if (currentWidth > 600) {
     return  FutureBuilder<List>(
       future: newsInfo(index),
       builder: (context, AsyncSnapshot<List> snapshot) {

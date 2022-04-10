@@ -15,7 +15,7 @@ class NavigationDrawerHeader extends StatelessWidget {
         mainAxisSize: MainAxisSize.min,
         children: <Widget>[
           Text(
-            'SKILL UP NOW',
+            '-',
             style: TextStyle(
               fontSize: 18,
               fontWeight: FontWeight.w800,
@@ -23,7 +23,7 @@ class NavigationDrawerHeader extends StatelessWidget {
             ),
           ),
           Text(
-            'TAP HERE',
+            '-',
             style: TextStyle(color: Colors.white),
           ),
         ],

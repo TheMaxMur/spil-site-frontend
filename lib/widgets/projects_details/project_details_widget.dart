@@ -779,6 +779,7 @@ class _DetailScreenDesktopState extends State<DetailScreenDesktop> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+        extendBodyBehindAppBar: true,
         backgroundColor: Colors.white,
         appBar: AppBar(
           backgroundColor: Colors.transparent,
@@ -791,6 +792,7 @@ class _DetailScreenDesktopState extends State<DetailScreenDesktop> {
         ),
         body: Center(
           child: Container(
+            color: Colors.white,
             child: Image.network(
               widget.projectImage,
             ),
@@ -829,6 +831,7 @@ class _DetailScreenMobileState extends State<DetailScreenMobile> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      extendBodyBehindAppBar: true,
         backgroundColor: Colors.white,
         appBar: AppBar(
           backgroundColor: Colors.transparent,

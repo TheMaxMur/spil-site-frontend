@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
+import 'package:pinch_zoom/pinch_zoom.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 import 'package:web_app/widgets/centered_view/centered_view.dart';
 import 'package:web_app/widgets/news_view/news.dart';
@@ -102,7 +103,7 @@ class _NewsDetailsWidgetState extends State<NewsDetailsWidget> {
                           itemBuilder: (context, index2, realIndex) {
                             final newsImage =
                                 News.news[index].newsImages[index2];
-                            return buildImage(newsImage, index2);
+                            return buildImageDesktop(newsImage, index2);
                           },
                         ),
                       ),
@@ -225,7 +226,7 @@ class _NewsDetailsWidgetState extends State<NewsDetailsWidget> {
                             itemBuilder: (context, index2, realIndex) {
                               final newsImage =
                                   News.news[index].newsImages[index2];
-                              return buildImage(newsImage, index2);
+                              return buildImageMobile(newsImage, index2);
                             },
                           ),
                         ),
@@ -290,6 +291,69 @@ class _NewsDetailsWidgetState extends State<NewsDetailsWidget> {
     );
   }
 
+    Widget buildImageDesktop(String newsImage, int index) => Container(
+      height: 700,
+      width: 800,
+      margin: EdgeInsets.symmetric(horizontal: 1),
+      color: Colors.white,
+      child: GestureDetector(
+        child: Image.network(
+          newsImage,
+          fit: BoxFit.fitHeight,
+        ),
+        onTap: () {
+          Navigator.push(context, MaterialPageRoute(builder: (_) {
+            return DetailScreenDesktop(
+              newsImage: newsImage,
+            );
+          }));
+        },
+      )
+//         child: PinchZoom(
+//     child: Image.network(projectImage),
+//     resetDuration: const Duration(milliseconds: 0),
+//     maxScale: 2.5,
+//     onZoomStart: (){Navigator.push(context, MaterialPageRoute(builder: (_) {return DetailScreen(projectImage: projectImage,);}));},
+//     onZoomEnd: (){print('Stop zooming');},
+// ),
+      // child: Image.network(
+      //   projectImage,
+      //   fit: BoxFit.fitHeight,
+      // ),
+      );
+
+  Widget buildImageMobile(String newsImage, int index) => Container(
+        height: 700,
+        width: 800,
+        margin: EdgeInsets.symmetric(horizontal: 1),
+        color: Colors.white,
+        child: GestureDetector(
+          child: Image.network(
+            newsImage,
+            fit: BoxFit.fitHeight,
+          ),
+          onTap: () {
+            Navigator.push(context, MaterialPageRoute(builder: (_) {
+              return DetailScreenMobile(
+                newsImage: newsImage,
+              );
+            }));
+          },
+          // )
+//         child: PinchZoom(
+//     child: Image.network(projectImage),
+//     resetDuration: const Duration(milliseconds: 0),
+//     maxScale: 2.5,
+//     onZoomStart: (){Navigator.push(context, MaterialPageRoute(builder: (_) {return DetailScreen(projectImage: projectImage,);}));},
+//     onZoomEnd: (){print('Stop zooming');},
+// ),
+          // child: Image.network(
+          //   projectImage,
+          //   fit: BoxFit.fitHeight,
+          // ),
+        ),
+      );
+
   Widget buildImage(String newsImage, int index) => Container(
         height: 700,
         width: 800,
@@ -341,4 +405,111 @@ class _NewsDetailsWidgetState extends State<NewsDetailsWidget> {
       );
   void next() => controller.nextPage();
   void previous() => controller.previousPage();
+}
+
+class DetailScreenDesktop extends StatefulWidget {
+  final String newsImage;
+
+  DetailScreenDesktop({Key? key, required this.newsImage}) : super(key: key);
+
+  @override
+  State<DetailScreenDesktop> createState() =>
+      _DetailScreenDesktopState(newsImage);
+}
+
+class _DetailScreenDesktopState extends State<DetailScreenDesktop> {
+  _DetailScreenDesktopState(String newsImage);
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+        extendBodyBehindAppBar: true,
+        backgroundColor: Colors.white,
+        appBar: AppBar(
+          backgroundColor: Colors.transparent,
+          bottomOpacity: 0.0,
+          elevation: 0.0,
+          leading: IconButton(
+            icon: Icon(Icons.close, color: Colors.black),
+            onPressed: () => Navigator.of(context).pop(),
+          ),
+        ),
+        body: Center(
+          child: Container(
+            color: Colors.white,
+            child: Image.network(
+              widget.newsImage,
+            ),
+          ),
+        )
+        // body: GestureDetector(
+        //   child: Center(
+        //     child: Hero(
+        //       tag: 'imageHero',
+        //       child: Image.network(
+        //         widget.projectImage,
+        //       ),
+        //     ),
+        //   ),
+        //   onTap: () {
+        //     Navigator.pop(context);
+        //   },
+        // ),
+        );
+  }
+}
+
+class DetailScreenMobile extends StatefulWidget {
+  final String newsImage;
+
+  DetailScreenMobile({Key? key, required this.newsImage}) : super(key: key);
+
+  @override
+  State<DetailScreenMobile> createState() =>
+      _DetailScreenMobileState(newsImage);
+}
+
+class _DetailScreenMobileState extends State<DetailScreenMobile> {
+  _DetailScreenMobileState(String newsImage);
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      extendBodyBehindAppBar: true,
+        backgroundColor: Colors.white,
+        appBar: AppBar(
+          backgroundColor: Colors.transparent,
+          bottomOpacity: 0.0,
+          elevation: 0.0,
+          leading: IconButton(
+            icon: Icon(Icons.close, color: Colors.black),
+            onPressed: () => Navigator.of(context).pop(),
+          ),
+        ),
+        body: Center(
+          child: Container(
+            child: PinchZoom(
+              child: Image.network(widget.newsImage),
+              resetDuration: const Duration(milliseconds: 0),
+              maxScale: 2.5,
+              onZoomStart: () {},
+              onZoomEnd: () {},
+            ),
+          ),
+        )
+        // body: GestureDetector(
+        //   child: Center(
+        //     child: Hero(
+        //       tag: 'imageHero',
+        //       child: Image.network(
+        //         widget.projectImage,
+        //       ),
+        //     ),
+        //   ),
+        //   onTap: () {
+        //     Navigator.pop(context);
+        //   },
+        // ),
+        );
+  }
 }
