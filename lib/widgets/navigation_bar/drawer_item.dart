@@ -39,6 +39,7 @@ class DrawerItem extends StatelessWidget {
       child: OutlinedButton(
         onPressed: () {
           scaffoldKey.currentState!.openDrawer();
+          locator<NavigationService>().navigateTo(route);
 
 //               if(scaffoldKey.currentState.isEndDrawerOpen){ //check if drawer is open
 //       Scaffold.of(contextMain).openEndDrawer(); //context of drawer is different
