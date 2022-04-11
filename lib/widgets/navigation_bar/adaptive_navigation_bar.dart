@@ -16,8 +16,10 @@ class MainNavigationBar extends StatefulWidget {
 }
 
 class _MainNavigationBarState extends State<MainNavigationBar> {
+
   @override
   Widget build(BuildContext context) {
+    
     final currentWidth = MediaQuery.of(context).size.width;
     final currentHeight = MediaQuery.of(context).size.height;
     if (currentHeight > 500) {
