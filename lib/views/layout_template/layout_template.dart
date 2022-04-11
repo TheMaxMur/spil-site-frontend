@@ -109,6 +109,7 @@ class LayoutTemplate extends StatelessWidget {
         );
       } else {
         return Scaffold(
+          key: _scaffoldKey,
           endDrawer: Container(
             width: 300,
             decoration: BoxDecoration(
