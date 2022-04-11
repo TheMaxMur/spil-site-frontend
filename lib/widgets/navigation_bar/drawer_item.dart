@@ -25,9 +25,11 @@ class DrawerItem extends StatelessWidget {
     toggleDrawer(route) async {
       locator<NavigationService>().navigateTo(route);
       if (scaffoldKey.currentState!.isEndDrawerOpen) {
+        // Duration(seconds: 3);
         scaffoldKey.currentState!.openDrawer();
       } else {
-        scaffoldKey.currentState!.openEndDrawer();
+        
+        scaffoldKey.currentState!.openEndDrawer(duration: 100);
       }
       locator<NavigationService>().navigateTo(route);
     }
