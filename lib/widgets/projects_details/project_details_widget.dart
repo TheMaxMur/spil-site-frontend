@@ -123,17 +123,20 @@ class _ProjectDetailsWidgetState extends State<ProjectDetailsWidget> {
                       ),
                       Column(
                         children: [
-                          Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Text('Project creators',
-                                  style: TextStyle(
-                                      fontSize: 21,
-                                      height: 1.2,
-                                      fontWeight: FontWeight.w800)),
-                              Text(Projects.projects[index].projectCreators,
-                                  style: TextStyle(fontSize: 21, height: 1.2))
-                            ],
+                          Align(
+                            alignment: Alignment.topLeft,
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text('Project creators',
+                                    style: TextStyle(
+                                        fontSize: 21,
+                                        height: 1.2,
+                                        fontWeight: FontWeight.w800)),
+                                Text(Projects.projects[index].projectCreators,
+                                    style: TextStyle(fontSize: 21, height: 1.2))
+                              ],
+                            ),
                           ),
                         ],
                       ),
@@ -297,17 +300,20 @@ class _ProjectDetailsWidgetState extends State<ProjectDetailsWidget> {
                     ),
                     Column(
                       children: [
-                        Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Text('Project creators',
-                                style: TextStyle(
-                                    fontSize: 21,
-                                    height: 1.2,
-                                    fontWeight: FontWeight.w800)),
-                            Text(Projects.projects[index].projectCreators,
-                                style: TextStyle(fontSize: 21, height: 1.2))
-                          ],
+                        Align(
+                          alignment: Alignment.topLeft,
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text('Project creators',
+                                  style: TextStyle(
+                                      fontSize: 21,
+                                      height: 1.2,
+                                      fontWeight: FontWeight.w800)),
+                              Text(Projects.projects[index].projectCreators,
+                                  style: TextStyle(fontSize: 21, height: 1.2))
+                            ],
+                          ),
                         ),
                       ],
                     ),
@@ -442,19 +448,22 @@ class _ProjectDetailsWidgetState extends State<ProjectDetailsWidget> {
                     ),
                     Column(
                       children: [
-                        Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Text('Project creators',
-                                style: TextStyle(
-                                    fontSize: 21,
-                                    height: 1.2,
-                                    fontWeight: FontWeight.w800)),
-                            Text(
-                              Projects.projects[index].projectCreators,
-                              style: TextStyle(fontSize: 21, height: 1.2),
-                            )
-                          ],
+                        Align(
+                          alignment: Alignment.topLeft,
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text('Project creators',
+                                  style: TextStyle(
+                                      fontSize: 21,
+                                      height: 1.2,
+                                      fontWeight: FontWeight.w800)),
+                              Text(
+                                Projects.projects[index].projectCreators,
+                                style: TextStyle(fontSize: 21, height: 1.2),
+                              )
+                            ],
+                          ),
                         ),
                       ],
                     ),
@@ -623,19 +632,23 @@ class _ProjectDetailsWidgetState extends State<ProjectDetailsWidget> {
                   ),
                   Column(
                     children: [
-                      Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Text('Project creators',
-                              style: TextStyle(
-                                  fontSize: 21,
-                                  height: 1.2,
-                                  fontWeight: FontWeight.w800)),
-                          Text(
-                            Projects.projects[index].projectCreators,
-                            style: TextStyle(fontSize: 21, height: 1.2),
-                          )
-                        ],
+                      Align(
+                        alignment: Alignment.topLeft,
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                                          textDirection: TextDirection.ltr,
+                          children: [
+                            Text('Project creators',
+                                style: TextStyle(
+                                    fontSize: 21,
+                                    height: 1.2,
+                                    fontWeight: FontWeight.w800)),
+                            Text(
+                              Projects.projects[index].projectCreators,
+                              style: TextStyle(fontSize: 21, height: 1.2),
+                            )
+                          ],
+                        ),
                       ),
                     ],
                   ),
