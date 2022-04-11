@@ -38,8 +38,15 @@ class DrawerItem extends StatelessWidget {
       padding: const EdgeInsets.only(left: 10, top: 10, right: 10),
       child: OutlinedButton(
         onPressed: () {
-          scaffoldKey.currentState!.openDrawer();
-          locator<NavigationService>().navigateTo(route);
+
+          // locator<NavigationService>().navigateTo(route);
+          // if (scaffoldKey.currentState != null) {
+          //   scaffoldKey.currentState.openDrawer();
+          // }
+          // else {
+          //   scaffoldKey.currentState.openDrawer();
+          // }
+          toggleDrawer(route);
 
 //               if(scaffoldKey.currentState.isEndDrawerOpen){ //check if drawer is open
 //       Scaffold.of(contextMain).openEndDrawer(); //context of drawer is different
