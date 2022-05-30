@@ -7,14 +7,14 @@ class HomeDetails extends StatelessWidget {
   Widget build(BuildContext context) {
     final currentWidth = MediaQuery.of(context).size.width;
     if (currentWidth > 900) {
-    return SizedBox(
-      width: 600,
+    return Container(
+      constraints: BoxConstraints(maxWidth: 750),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Text(
-            'МИИГАиК Проекты',
+            'СПИЛ',
             style: TextStyle(fontWeight: FontWeight.w800, height: 0.9, fontSize: 80),
           ),
           SizedBox(
@@ -24,7 +24,7 @@ class HomeDetails extends StatelessWidget {
             children: [
               Flexible(
                 child: Text(
-                  'В настоящее время университет - крупный учебно-научный и производственный комплекс, включающий семь факультетов дневного обучения, аспирантуру и докторантуру, учебные специализированные лаборатории по различным направлениям геодезии, картографии, кадастра, геоинформатики и дистанционного зондирования. В структуре университета функционируют 25 учебных, научно-производственных центров и лабораторий, издательство журнала «Геодезия и аэрофотосъемка», три учебных полигона, учебно-геодезический музей и библиотека. В составе вуза действует два профильных колледжа.',
+                  'Студенческая проектно-исследовательская лаборатория – это центр, предоставляющий его участникам возможность принимать участие в научной деятельности ВУЗа.',
                   style: TextStyle(fontSize: 21, height: 1.7),
                 ),
               ),
@@ -32,7 +32,6 @@ class HomeDetails extends StatelessWidget {
           )
         ],
       ),
-
     );
     }
     else {
@@ -45,7 +44,7 @@ class HomeDetails extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text(
-              'МИИГАиК Проекты',
+              'СПИЛ',
               style: TextStyle(fontWeight: FontWeight.w800, height: 0.9, fontSize: 50),
             ),
             SizedBox(
@@ -55,7 +54,7 @@ class HomeDetails extends StatelessWidget {
               children: [
                 Flexible(
                   child: Text(
-                    'В настоящее время университет - крупный учебно-научный и производственный комплекс, включающий семь факультетов дневного обучения, аспирантуру и докторантуру, учебные специализированные лаборатории по различным направлениям геодезии, картографии, кадастра, геоинформатики и дистанционного зондирования. В структуре университета функционируют 25 учебных, научно-производственных центров и лабораторий, издательство журнала «Геодезия и аэрофотосъемка», три учебных полигона, учебно-геодезический музей и библиотека. В составе вуза действует два профильных колледжа.',
+                    'Студенческая проектно-исследовательская лаборатория – это центр, предоставляющий его участникам возможность принимать участие в научной деятельности ВУЗа.',
                     style: TextStyle(fontSize: 17, height: 1.7),
                   ),
                 ),

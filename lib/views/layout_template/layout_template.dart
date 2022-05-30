@@ -81,10 +81,10 @@ class LayoutTemplate extends StatelessWidget {
             child: Column(
               children: <Widget>[
                 
-                DrawerItem(title: 'Home', icon: Icons.home, route: '/home', contextMain: context,scaffoldKey: _scaffoldKey),
-                DrawerItem(title: 'News', icon: Icons.view_quilt, route: '/news', contextMain: context,scaffoldKey: _scaffoldKey),
-                DrawerItem(title: 'Projects', icon: Icons.folder, route: '/projects', contextMain: context,scaffoldKey: _scaffoldKey),
-                DrawerItem(title: 'Contacts', icon: Icons.call, route: '/contacts', contextMain: context,scaffoldKey: _scaffoldKey),
+                DrawerItem(title: 'СПИЛ', icon: Icons.home, route: '/home', contextMain: context,scaffoldKey: _scaffoldKey),
+                DrawerItem(title: 'Новости', icon: Icons.view_quilt, route: '/news', contextMain: context,scaffoldKey: _scaffoldKey),
+                DrawerItem(title: 'Проекты', icon: Icons.folder, route: '/projects', contextMain: context,scaffoldKey: _scaffoldKey),
+                DrawerItem(title: 'Контакты', icon: Icons.call, route: '/contacts', contextMain: context,scaffoldKey: _scaffoldKey),
               ],
             ),
           ),
@@ -117,10 +117,10 @@ class LayoutTemplate extends StatelessWidget {
                 boxShadow: [BoxShadow(color: Colors.black12, blurRadius: 16)]),
             child: Column(
               children: <Widget>[
-                DrawerItem(title: 'Home', icon: Icons.home, route: '/home', contextMain: context,scaffoldKey: _scaffoldKey),
-                DrawerItem(title: 'News', icon: Icons.view_quilt, route: '/news', contextMain: context,scaffoldKey: _scaffoldKey),
-                DrawerItem(title: 'Projects', icon: Icons.folder, route: '/projects', contextMain: context,scaffoldKey: _scaffoldKey),
-                DrawerItem(title: 'Contacts', icon: Icons.call, route: '/contacts', contextMain: context,scaffoldKey: _scaffoldKey),
+                DrawerItem(title: 'СПИЛ', icon: Icons.home, route: '/home', contextMain: context,scaffoldKey: _scaffoldKey),
+                DrawerItem(title: 'Новости', icon: Icons.view_quilt, route: '/news', contextMain: context,scaffoldKey: _scaffoldKey),
+                DrawerItem(title: 'Проекты', icon: Icons.folder, route: '/projects', contextMain: context,scaffoldKey: _scaffoldKey),
+                DrawerItem(title: 'Контакты', icon: Icons.call, route: '/contacts', contextMain: context,scaffoldKey: _scaffoldKey),
               ],
             ),
           ),

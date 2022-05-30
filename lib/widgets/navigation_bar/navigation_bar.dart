@@ -28,7 +28,7 @@ class MainNavigationBar extends StatelessWidget {
                         context, '/home', (route) => false);
                   },
                   child: Text(
-                    'Home',
+                    'СПИЛ',
                     style: TextStyle(fontSize: 18, color: Colors.black),
                   )),
               SizedBox(
@@ -40,7 +40,7 @@ class MainNavigationBar extends StatelessWidget {
                         context, '/projects', (route) => false);
                   },
                   child: Text(
-                    'Projects',
+                    'Проекты',
                     style: TextStyle(fontSize: 18, color: Colors.black),
                   )),
               SizedBox(
@@ -52,7 +52,7 @@ class MainNavigationBar extends StatelessWidget {
                         context, '/contact', (route) => false);
                   },
                   child: Text(
-                    'Contact',
+                    'Контакты',
                     style: TextStyle(fontSize: 18, color: Colors.black),
                   )),
             ],

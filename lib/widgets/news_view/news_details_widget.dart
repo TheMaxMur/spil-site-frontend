@@ -76,9 +76,30 @@ class _NewsDetailsWidgetState extends State<NewsDetailsWidget> {
                       ),
                     ),
                     SizedBox(
-                      height: 20,
+                      height: 5,
                     ),
-                    
+                    Align(
+                      alignment: Alignment.topLeft,
+                      child: Row(
+                        children: [
+                          Text(
+                                    News.news[index].newsTimestamp.toString().substring(0,10),
+                                    style: TextStyle(
+                                      height: 1.7,
+                                      fontSize: 10,
+                                    ),
+                                  ),
+                                  SizedBox(width: 10,),
+                                  Text(
+                                    News.news[index].newsTimestamp.toString().substring(11,19),
+                                    style: TextStyle(
+                                      height: 1.7,
+                                      fontSize: 10,
+                                    ),
+                                  ),
+                        ],
+                      ),
+                    ),
                     SizedBox(
                       height: 20,
                     ),
@@ -140,9 +161,30 @@ class _NewsDetailsWidgetState extends State<NewsDetailsWidget> {
                       ),
                     ),
                     SizedBox(
-                      height: 20,
+                      height: 5,
                     ),
-                    
+                    Align(
+                      alignment: Alignment.topLeft,
+                      child: Row(
+                        children: [
+                          Text(
+                                    News.news[index].newsTimestamp.toString().substring(0,10),
+                                    style: TextStyle(
+                                      height: 1.7,
+                                      fontSize: 10,
+                                    ),
+                                  ),
+                                  SizedBox(width: 10,),
+                                  Text(
+                                    News.news[index].newsTimestamp.toString().substring(11,19),
+                                    style: TextStyle(
+                                      height: 1.7,
+                                      fontSize: 10,
+                                    ),
+                                  ),
+                        ],
+                      ),
+                    ),
                     SizedBox(
                       height: 20,
                     ),
@@ -191,7 +233,7 @@ class _NewsDetailsWidgetState extends State<NewsDetailsWidget> {
                                 style: TextStyle(
                                   fontWeight: FontWeight.w800,
                                   height: 1.2,
-                                  fontSize: 60,
+                                  fontSize: 40,
                                 ),
                               ),
                             ),
@@ -199,9 +241,30 @@ class _NewsDetailsWidgetState extends State<NewsDetailsWidget> {
                         ),
                       ),
                       SizedBox(
-                        height: 20,
+                        height: 5,
                       ),
-                      
+                      Align(
+                      alignment: Alignment.topLeft,
+                      child: Row(
+                        children: [
+                          Text(
+                                    News.news[index].newsTimestamp.toString().substring(0,10),
+                                    style: TextStyle(
+                                      height: 1.7,
+                                      fontSize: 10,
+                                    ),
+                                  ),
+                                  SizedBox(width: 10,),
+                                  Text(
+                                    News.news[index].newsTimestamp.toString().substring(11,19),
+                                    style: TextStyle(
+                                      height: 1.7,
+                                      fontSize: 10,
+                                    ),
+                                  ),
+                        ],
+                      ),
+                    ),
                       SizedBox(
                         height: 20,
                       ),
@@ -257,7 +320,7 @@ class _NewsDetailsWidgetState extends State<NewsDetailsWidget> {
                               style: TextStyle(
                                 fontWeight: FontWeight.w800,
                                 height: 1.2,
-                                fontSize: 60,
+                                fontSize: 40,
                               ),
                             ),
                           ),
@@ -265,9 +328,30 @@ class _NewsDetailsWidgetState extends State<NewsDetailsWidget> {
                       ),
                     ),
                     SizedBox(
-                      height: 20,
+                      height: 5,
                     ),
-                    
+                    Align(
+                      alignment: Alignment.topLeft,
+                      child: Row(
+                        children: [
+                          Text(
+                                    News.news[index].newsTimestamp.toString().substring(0,10),
+                                    style: TextStyle(
+                                      height: 1.7,
+                                      fontSize: 10,
+                                    ),
+                                  ),
+                                  SizedBox(width: 10,),
+                                  Text(
+                                    News.news[index].newsTimestamp.toString().substring(11,19),
+                                    style: TextStyle(
+                                      height: 1.7,
+                                      fontSize: 10,
+                                    ),
+                                  ),
+                        ],
+                      ),
+                    ),
                     SizedBox(
                       height: 20,
                     ),
