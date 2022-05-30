@@ -11,11 +11,13 @@ class Project {
   late String projectTheme;
   late String projectCreators;
   late List projectImages;
+  late String projectTimestamp;
 
   Project(
       {required this.id, required this.assetsImage, required this.projectName,
        required this.projectText, required this.projectTheme, required this.projectCreators,
        required this.projectImages,
+       required this.projectTimestamp,
        });
 
   Project.fromJson(Map<String, dynamic> map)
@@ -25,7 +27,8 @@ class Project {
         projectText = map['text'],
         projectTheme = map['theme'],
         projectCreators = map['creators'],
-        projectImages = map['projects_image'];
+        projectImages = map['projects_image'],
+        projectTimestamp = map['created'];
 }
 
 class Projects extends ChangeNotifier{

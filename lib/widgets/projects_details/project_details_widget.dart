@@ -26,7 +26,7 @@ class _ProjectDetailsWidgetState extends State<ProjectDetailsWidget> {
   final int index;
   final projects = Projects.getProjects();
 
-  // элемент списка по прожект айди - 1
+  
   final _projectImages = [
     'assets/details1.jpg',
     'assets/details2.jpg',
@@ -153,7 +153,7 @@ class _ProjectDetailsWidgetState extends State<ProjectDetailsWidget> {
                                       fontSize: 21,
                                       height: 1.2,
                                       fontWeight: FontWeight.w800)),
-                              Text('-',
+                              Text(Projects.projects[index].projectTimestamp,
                                   style: TextStyle(fontSize: 21, height: 1.2))
                             ],
                           ),
@@ -330,7 +330,7 @@ class _ProjectDetailsWidgetState extends State<ProjectDetailsWidget> {
                                     fontSize: 21,
                                     height: 1.2,
                                     fontWeight: FontWeight.w800)),
-                            Text('-',
+                            Text(Projects.projects[index].projectTimestamp,
                                 style: TextStyle(fontSize: 21, height: 1.2))
                           ],
                         ),
@@ -437,7 +437,7 @@ class _ProjectDetailsWidgetState extends State<ProjectDetailsWidget> {
                                     fontSize: 21,
                                     height: 1.2,
                                     fontWeight: FontWeight.w800)),
-                            Text('-',
+                            Text(Projects.projects[index].projectTimestamp,
                                 style: TextStyle(fontSize: 21, height: 1.2))
                           ],
                         ),
@@ -622,7 +622,7 @@ class _ProjectDetailsWidgetState extends State<ProjectDetailsWidget> {
                                   fontSize: 21,
                                   height: 1.2,
                                   fontWeight: FontWeight.w800)),
-                          Text('-', style: TextStyle(fontSize: 21, height: 1.2))
+                          Text(Projects.projects[index].projectTimestamp, style: TextStyle(fontSize: 21, height: 1.2))
                         ],
                       ),
                     ],

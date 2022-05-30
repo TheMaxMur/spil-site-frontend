@@ -9,6 +9,7 @@ class NewsMain {
   late String newsName;
   late String newsText;
   late List newsImages;
+  late String newsTimestamp;
 
   NewsMain({
     required this.id,
@@ -16,6 +17,7 @@ class NewsMain {
     required this.newsName,
     required this.newsText,
     required this.newsImages,
+    required this.newsTimestamp,
   });
 
   NewsMain.fromJson(Map<String, dynamic> map)
@@ -23,7 +25,8 @@ class NewsMain {
         assetsImage = map['preview_image'],
         newsName = map['title'],
         newsText = map['text'],
-        newsImages = map['news_image'];
+        newsImages = map['news_image'],
+        newsTimestamp = map['create_timestamp'];
 }
 
 class News extends ChangeNotifier {

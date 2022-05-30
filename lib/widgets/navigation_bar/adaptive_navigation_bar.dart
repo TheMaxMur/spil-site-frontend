@@ -26,16 +26,16 @@ class _MainNavigationBarState extends State<MainNavigationBar> {
       if (currentWidth > 900) {
         return Container(
           color: Colors.white,
-          height: 100,
+          height:300,
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: <Widget>[
               SizedBox(
-                height: 150,
+                height: 300,
                 width: 300,
-                child: SvgPicture.asset(
-                  'assets/logo.svg',
-                  color: Colors.black,
+                child: Image.asset(
+                  'assets/ExtraLogo3png.png',
+                  // color: Colors.black,
                 ),
               ),
               Row(
@@ -46,7 +46,7 @@ class _MainNavigationBarState extends State<MainNavigationBar> {
                         locator<NavigationService>().navigateTo(HomeRoute);
                       },
                       child: Text(
-                        'Home',
+                        'СПИЛ',
                         style: TextStyle(fontSize: 18, color: Colors.black),
                       )),
                   SizedBox(
@@ -57,7 +57,7 @@ class _MainNavigationBarState extends State<MainNavigationBar> {
                         locator<NavigationService>().navigateTo(NewsRoute);
                       },
                       child: Text(
-                        'News',
+                        'Новости',
                         style: TextStyle(fontSize: 18, color: Colors.black),
                       )),
                   SizedBox(
@@ -68,7 +68,7 @@ class _MainNavigationBarState extends State<MainNavigationBar> {
                         locator<NavigationService>().navigateTo(ProjectsRoute);
                       },
                       child: Text(
-                        'Projects',
+                        'Проекты',
                         style: TextStyle(fontSize: 18, color: Colors.black),
                       )),
                   SizedBox(
@@ -79,7 +79,7 @@ class _MainNavigationBarState extends State<MainNavigationBar> {
                         locator<NavigationService>().navigateTo(ContactsRoute);
                       },
                       child: Text(
-                        'Contact',
+                        'Контакты',
                         style: TextStyle(fontSize: 18, color: Colors.black),
                       )),
                 ],
@@ -89,16 +89,24 @@ class _MainNavigationBarState extends State<MainNavigationBar> {
         );
       } else {
         return Container(
-          height: 90,
+          height: 200,
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: <Widget>[
+              // SizedBox(
+              //   height: 100,
+              //   width: 200,
+              //   child: SvgPicture.asset(
+              //     'assets/logo.svg',
+              //     color: Colors.black,
+              //   ),
+              // ),
               SizedBox(
-                height: 100,
-                width: 200,
-                child: SvgPicture.asset(
-                  'assets/logo.svg',
-                  color: Colors.black,
+                height: 300,
+                width: 300,
+                child: Image.asset(
+                  'assets/ExtraLogo3png.png',
+                  // color: Colors.black,
                 ),
               ),
               IconButton(onPressed: () {Scaffold.of(context).openEndDrawer();}, icon: Icon(Icons.menu))
@@ -156,16 +164,24 @@ class _MainNavigationBarState extends State<MainNavigationBar> {
       if (currentWidth > 900) {
         return Container(
           color: Colors.white,
-          height: 80,
+          height: 300,
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: <Widget>[
+              // SizedBox(
+              //   height: 50,
+              //   width: 100,
+              //   child: SvgPicture.asset(
+              //     'assets/logo.svg',
+              //     color: Colors.black,
+              //   ),
+              // ),
               SizedBox(
-                height: 50,
-                width: 100,
-                child: SvgPicture.asset(
-                  'assets/logo.svg',
-                  color: Colors.black,
+                height: 300,
+                width: 300,
+                child: Image.asset(
+                  'assets/ExtraLogo3png.png',
+                  // color: Colors.black,
                 ),
               ),
               Row(
@@ -176,7 +192,7 @@ class _MainNavigationBarState extends State<MainNavigationBar> {
                         locator<NavigationService>().navigateTo(HomeRoute);
                       },
                       child: Text(
-                        'Home',
+                        'СПИЛ',
                         style: TextStyle(fontSize: 18, color: Colors.black),
                       )),
                   SizedBox(
@@ -187,7 +203,7 @@ class _MainNavigationBarState extends State<MainNavigationBar> {
                         locator<NavigationService>().navigateTo(NewsRoute);
                       },
                       child: Text(
-                        'News',
+                        'Новости',
                         style: TextStyle(fontSize: 18, color: Colors.black),
                       )),
                   SizedBox(
@@ -198,7 +214,7 @@ class _MainNavigationBarState extends State<MainNavigationBar> {
                         locator<NavigationService>().navigateTo(ProjectsRoute);
                       },
                       child: Text(
-                        'Projects',
+                        'Проекты',
                         style: TextStyle(fontSize: 18, color: Colors.black),
                       )),
                   SizedBox(
@@ -209,7 +225,7 @@ class _MainNavigationBarState extends State<MainNavigationBar> {
                         locator<NavigationService>().navigateTo(ContactsRoute);
                       },
                       child: Text(
-                        'Contact',
+                        'Контакты',
                         style: TextStyle(fontSize: 18, color: Colors.black),
                       )),
                 ],
@@ -219,20 +235,28 @@ class _MainNavigationBarState extends State<MainNavigationBar> {
         );
       } else {
         return Container(
-          height: 50,
+          height: 300,
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: <Widget>[
               Padding(
                 padding: const EdgeInsets.all(8.0),
+                // child: SizedBox(
+                //   height: 50,
+                //   width: 100,
+                //   child: SvgPicture.asset(
+                //     'assets/logo.svg',
+                //     color: Colors.black,
+                //   ),
+                // ),
                 child: SizedBox(
-                  height: 50,
-                  width: 100,
-                  child: SvgPicture.asset(
-                    'assets/logo.svg',
-                    color: Colors.black,
-                  ),
+                height: 300,
+                width: 300,
+                child: Image.asset(
+                  'assets/ExtraLogo3png.png',
+                  // color: Colors.black,
                 ),
+              ),
               ),
               IconButton(onPressed: () {Scaffold.of(context).openEndDrawer();}, icon: Icon(Icons.menu))
               // Row(
