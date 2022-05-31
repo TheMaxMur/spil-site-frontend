@@ -250,8 +250,8 @@ class _MainNavigationBarState extends State<MainNavigationBar> {
                 //   ),
                 // ),
                 child: SizedBox(
-                height: 300,
-                width: 300,
+                height: 200,
+                width: 200,
                 child: SvgPicture.asset(
                   'assets/reExtraLogo2_size1.svg',
                   //  color: Colors.black,
