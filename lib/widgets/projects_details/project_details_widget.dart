@@ -77,26 +77,6 @@ class _ProjectDetailsWidgetState extends State<ProjectDetailsWidget> {
                         ),
                       ),
                       SizedBox(
-                        height: 10,
-                      ),
-                      Align(
-                        alignment: Alignment.topLeft,
-                        child: Row(
-                          children: [
-                            Flexible(
-                              fit: FlexFit.tight,
-                              child: Text(
-                                'Краткое описание проекта',
-                                style: TextStyle(
-                                  fontSize: 17,
-                                  height: 1.7,
-                                ),
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
-                      SizedBox(
                         height: 20,
                       ),
                       Row(
@@ -104,7 +84,7 @@ class _ProjectDetailsWidgetState extends State<ProjectDetailsWidget> {
                           Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              Text('Project type',
+                              Text('Тема проекта',
                                   style: TextStyle(
                                       fontSize: 21,
                                       height: 1.2,
@@ -128,7 +108,7 @@ class _ProjectDetailsWidgetState extends State<ProjectDetailsWidget> {
                             child: Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
-                                Text('Project creators',
+                                Text('Создатели проекта',
                                     style: TextStyle(
                                         fontSize: 21,
                                         height: 1.2,
@@ -148,7 +128,7 @@ class _ProjectDetailsWidgetState extends State<ProjectDetailsWidget> {
                           Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              Text('Date',
+                              Text('Дата создания',
                                   style: TextStyle(
                                       fontSize: 21,
                                       height: 1.2,
@@ -254,26 +234,6 @@ class _ProjectDetailsWidgetState extends State<ProjectDetailsWidget> {
                       ),
                     ),
                     SizedBox(
-                      height: 10,
-                    ),
-                    Align(
-                      alignment: Alignment.topLeft,
-                      child: Row(
-                        children: [
-                          Flexible(
-                            fit: FlexFit.tight,
-                            child: Text(
-                              'Краткое описание проекта',
-                              style: TextStyle(
-                                fontSize: 17,
-                                height: 1.7,
-                              ),
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),
-                    SizedBox(
                       height: 20,
                     ),
                     Row(
@@ -281,7 +241,7 @@ class _ProjectDetailsWidgetState extends State<ProjectDetailsWidget> {
                         Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            Text('Project type',
+                            Text('Тема проекта',
                                 style: TextStyle(
                                     fontSize: 21,
                                     height: 1.2,
@@ -305,7 +265,7 @@ class _ProjectDetailsWidgetState extends State<ProjectDetailsWidget> {
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              Text('Project creators',
+                              Text('Создатели',
                                   style: TextStyle(
                                       fontSize: 21,
                                       height: 1.2,
@@ -325,7 +285,7 @@ class _ProjectDetailsWidgetState extends State<ProjectDetailsWidget> {
                         Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            Text('Date',
+                            Text('Дата создания',
                                 style: TextStyle(
                                     fontSize: 21,
                                     height: 1.2,
@@ -391,31 +351,11 @@ class _ProjectDetailsWidgetState extends State<ProjectDetailsWidget> {
                     SizedBox(
                       height: 20,
                     ),
-                    Align(
-                      alignment: Alignment.topLeft,
-                      child: Row(
-                        children: [
-                          Flexible(
-                            fit: FlexFit.tight,
-                            child: Text(
-                              'Краткое описание проекта',
-                              style: TextStyle(
-                                fontSize: 21,
-                                height: 1.7,
-                              ),
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),
-                    SizedBox(
-                      height: 20,
-                    ),
                     Row(
                       children: [
                         Column(
                           children: [
-                            Text('Project type',
+                            Text('Тема проекта',
                                 style: TextStyle(
                                     fontSize: 21,
                                     height: 1.2,
@@ -432,7 +372,7 @@ class _ProjectDetailsWidgetState extends State<ProjectDetailsWidget> {
                         ),
                         Column(
                           children: [
-                            Text('Date',
+                            Text('Дата создания',
                                 style: TextStyle(
                                     fontSize: 21,
                                     height: 1.2,
@@ -453,7 +393,7 @@ class _ProjectDetailsWidgetState extends State<ProjectDetailsWidget> {
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              Text('Project creators',
+                              Text('Создатели проекта',
                                   style: TextStyle(
                                       fontSize: 21,
                                       height: 1.2,
@@ -576,31 +516,11 @@ class _ProjectDetailsWidgetState extends State<ProjectDetailsWidget> {
                   SizedBox(
                     height: 20,
                   ),
-                  Align(
-                    alignment: Alignment.topLeft,
-                    child: Row(
-                      children: [
-                        Flexible(
-                          fit: FlexFit.tight,
-                          child: Text(
-                            'Краткое описание проекта',
-                            style: TextStyle(
-                              fontSize: 21,
-                              height: 1.7,
-                            ),
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                  SizedBox(
-                    height: 20,
-                  ),
                   Row(
                     children: [
                       Column(
                         children: [
-                          Text('Project type',
+                          Text('Тема проекта',
                               style: TextStyle(
                                   fontSize: 21,
                                   height: 1.2,
@@ -617,7 +537,7 @@ class _ProjectDetailsWidgetState extends State<ProjectDetailsWidget> {
                       ),
                       Column(
                         children: [
-                          Text('Date',
+                          Text('Дата создания',
                               style: TextStyle(
                                   fontSize: 21,
                                   height: 1.2,
@@ -638,7 +558,7 @@ class _ProjectDetailsWidgetState extends State<ProjectDetailsWidget> {
                           crossAxisAlignment: CrossAxisAlignment.start,
                                           textDirection: TextDirection.ltr,
                           children: [
-                            Text('Project creators',
+                            Text('Создатели проекта',
                                 style: TextStyle(
                                     fontSize: 21,
                                     height: 1.2,

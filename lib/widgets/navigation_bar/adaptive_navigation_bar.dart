@@ -26,16 +26,16 @@ class _MainNavigationBarState extends State<MainNavigationBar> {
       if (currentWidth > 900) {
         return Container(
           color: Colors.white,
-          height:300,
+          height:100,
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: <Widget>[
               SizedBox(
-                height: 300,
-                width: 300,
-                child: Image.asset(
-                  'assets/ExtraLogo3png.png',
-                  // color: Colors.black,
+                height: 400,
+                width: 500,
+                child: SvgPicture.asset(
+                  'assets/reExtraLogo2_size1.svg',
+                  //  color: Colors.black,
                 ),
               ),
               Row(
@@ -89,7 +89,7 @@ class _MainNavigationBarState extends State<MainNavigationBar> {
         );
       } else {
         return Container(
-          height: 200,
+          height: 100,
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: <Widget>[
@@ -104,9 +104,9 @@ class _MainNavigationBarState extends State<MainNavigationBar> {
               SizedBox(
                 height: 300,
                 width: 300,
-                child: Image.asset(
-                  'assets/ExtraLogo3png.png',
-                  // color: Colors.black,
+                child: SvgPicture.asset(
+                  'assets/reExtraLogo2_size1.svg',
+                  //  color: Colors.black,
                 ),
               ),
               IconButton(onPressed: () {Scaffold.of(context).openEndDrawer();}, icon: Icon(Icons.menu))
@@ -164,7 +164,7 @@ class _MainNavigationBarState extends State<MainNavigationBar> {
       if (currentWidth > 900) {
         return Container(
           color: Colors.white,
-          height: 300,
+          height: 100,
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: <Widget>[
@@ -177,11 +177,11 @@ class _MainNavigationBarState extends State<MainNavigationBar> {
               //   ),
               // ),
               SizedBox(
-                height: 300,
-                width: 300,
-                child: Image.asset(
-                  'assets/ExtraLogo3png.png',
-                  // color: Colors.black,
+                height: 400,
+                width: 500,
+                child: SvgPicture.asset(
+                  'assets/reExtraLogo2_size1.svg',
+                  //  color: Colors.black,
                 ),
               ),
               Row(
@@ -235,7 +235,7 @@ class _MainNavigationBarState extends State<MainNavigationBar> {
         );
       } else {
         return Container(
-          height: 300,
+          height: 100,
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: <Widget>[
@@ -252,9 +252,9 @@ class _MainNavigationBarState extends State<MainNavigationBar> {
                 child: SizedBox(
                 height: 300,
                 width: 300,
-                child: Image.asset(
-                  'assets/ExtraLogo3png.png',
-                  // color: Colors.black,
+                child: SvgPicture.asset(
+                  'assets/reExtraLogo2_size1.svg',
+                  //  color: Colors.black,
                 ),
               ),
               ),
