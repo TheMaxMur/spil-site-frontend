@@ -89,7 +89,7 @@ class _MainNavigationBarState extends State<MainNavigationBar> {
         );
       } else {
         return Container(
-          height: 200,
+          height: 100,
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: <Widget>[
