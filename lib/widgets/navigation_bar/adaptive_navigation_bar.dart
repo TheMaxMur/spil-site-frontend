@@ -26,7 +26,7 @@ class _MainNavigationBarState extends State<MainNavigationBar> {
       if (currentWidth > 900) {
         return Container(
           color: Colors.white,
-          height:300,
+          height:100,
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: <Widget>[
